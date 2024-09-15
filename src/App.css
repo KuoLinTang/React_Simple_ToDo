@@ -1,0 +1,67 @@
+/* 調整每一個元素預設的CSS屬性 (*代表所有元素) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Entire page background */
+    background-color: #3b36cc;
+    /* Text color */
+    color: white;
+    /* 讓body內容跑到中間位置 */
+    display: flex;
+    flex-direction: row;
+    /* 由於flex box的預設方向為水平，因此不寫flex-direction: row也不影響 */
+    justify-content: center;
+    /* 指定字體 */
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 450px;
+    padding: 30px;
+    background-color: #1a1a40;
+    border-radius: 5px;
+    /* 讓wrapper往下移動20px */
+    margin-top: 20px;
+    /* 讓內部文字置中對齊 */
+    text-align: center;
+}
+
+.create-form {
+    height: 40px;
+    width: 100%;
+    /* 25px為上下 0px為左右 */
+    margin: 25px 0px;
+    border: 1px solid #3b36cc;
+    display: flex;
+}
+/* 
+    >代表選擇create-form class中下一階層的input元素 
+    若使用空格則是選擇create-form中所有(任何階層)的input元素
+*/
+.create-form > input {
+    /* 取消input外框及背景色 */
+    outline: none;
+    border: none;
+    background: none;
+    /* 文字顏色 */
+    color: white;
+    /* 讓寬度高度最大 但是這樣會把submit button擠下去，
+        因此我們可以把form變成一個水平的flex box，這樣CSS會強制將內部的東西保持在同一行 */
+    width: 100%;
+    height: 100%;
+    /* 調整padding */
+    padding-left: 10px;
+}
+.create-form > button {
+    border: none;
+    background-color: #3b36cc;
+    color: white;
+    width: 50px;
+    height: 100%;
+    /* 當滑鼠在此元素上變成pointer樣式 */
+    cursor: pointer;
+}

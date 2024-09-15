@@ -1,6 +1,9 @@
+import './App.css'
+import TodoWrapper from './components/ToDoWrapper'
+
 function App() {
   return (
-    <>hello world</>
+    <><TodoWrapper /></>
   )
 }
 
