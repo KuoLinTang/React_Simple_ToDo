@@ -39,8 +39,8 @@ body {
     display: flex;
 }
 /* 
-    >代表選擇create-form class中下一階層的input元素 
-    若使用空格則是選擇create-form中所有(任何階層)的input元素
+    ">"代表選擇create-form class中下一階層的input元素 
+    若使用"空格"則是選擇create-form中所有(任何階層)的input元素
 */
 .create-form > input {
     /* 取消input外框及背景色 */
@@ -64,4 +64,17 @@ body {
     height: 100%;
     /* 當滑鼠在此元素上變成pointer樣式 */
     cursor: pointer;
+}
+
+.todo {
+    background-color: #3b36cc;
+    height: 40px;
+    padding: 0px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* 將todo的內容文字移動到最左邊 */
+    display: flex;
+    justify-content: space-between;
+    /* 將todo的內容垂直置中 */
+    align-items: center;
 }
