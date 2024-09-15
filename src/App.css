@@ -1,0 +1,31 @@
+/* 調整每一個元素預設的CSS屬性 (*代表所有元素) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Entire page background */
+    background-color: #3b36cc;
+    /* Text color */
+    color: white;
+    /* 讓body內容跑到中間位置 */
+    display: flex;
+    flex-direction: row;
+    /* 由於flex box的預設方向為水平，因此不寫flex-direction: row也不影響 */
+    justify-content: center;
+    /* 指定字體 */
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 450px;
+    padding: 30px;
+    background-color: #1a1a40;
+    border-radius: 5px;
+    /* 讓wrapper往下移動20px */
+    margin-top: 20px;
+    /* 讓內部文字置中對齊 */
+    text-align: center;
+}
