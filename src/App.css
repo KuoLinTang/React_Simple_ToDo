@@ -39,8 +39,8 @@ body {
     display: flex;
 }
 /* 
-    >代表選擇create-form class中下一階層的input元素 
-    若使用空格則是選擇create-form中所有(任何階層)的input元素
+    ">"代表選擇create-form class中下一階層的input元素 
+    若使用"空格"則是選擇create-form中所有(任何階層)的input元素
 */
 .create-form > input {
     /* 取消input外框及背景色 */
