@@ -65,3 +65,16 @@ body {
     /* 當滑鼠在此元素上變成pointer樣式 */
     cursor: pointer;
 }
+
+.todo {
+    background-color: #3b36cc;
+    height: 40px;
+    padding: 0px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* 將todo的內容文字移動到最左邊 */
+    display: flex;
+    justify-content: space-between;
+    /* 將todo的內容垂直置中 */
+    align-items: center;
+}
