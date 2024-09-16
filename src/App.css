@@ -78,3 +78,10 @@ body {
     /* 將todo的內容垂直置中 */
     align-items: center;
 }
+
+.completed {
+    /* 顏色變淡 */
+    opacity: 0.4;
+    /* 文字加上刪除線 */
+    text-decoration: line-through 3px black;
+}
