@@ -1,15 +1,29 @@
 import { MdDelete, MdEdit } from "react-icons/md";
+import EditForm from "./EditForm";
 
-function ToDo({ todo, deleteTodo, toggleCompleted }) {
+function ToDo({ todo, deleteTodo, toggleCompleted, toggleEditing, editTodo }) {
   const handleClick = () => {
     deleteTodo(todo.id);
   };
 
-  return (
-    <div className={`todo ${todo.isCompleted ? 'completed': ''}`}>
-      <p onClick={() => {toggleCompleted(todo.id)}}>{todo.content}</p>
+  return todo.isEditing ? (
+    <EditForm editTodo={editTodo} todo={todo} />
+  ) : (
+    <div className={`todo ${todo.isCompleted ? "completed" : ""}`}>
+      <p
+        onClick={() => {
+          toggleCompleted(todo.id);
+        }}
+      >
+        {todo.content}
+      </p>
       <div>
-        <MdEdit style={{ cursor: "pointer" }} />
+        <MdEdit
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            toggleEditing(todo.id);
+          }}
+        />
         <MdDelete
           style={{ cursor: "pointer", marginLeft: "5px" }}
           onClick={handleClick}
